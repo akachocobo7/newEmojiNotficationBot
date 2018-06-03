@@ -8,7 +8,7 @@ if __name__ == "__main__":
     # 絵文字リスト取得用のurl
     url = 'https://slack.com/api/emoji.list'
     # 認証用のパラメータ
-    param={"token":enviroment.SLACK_TOKEN}
+    param={"token":enviroment.SLACK_LEGACY_TOKEN}
     # おまじない
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
     # 絵文字リストを取得
