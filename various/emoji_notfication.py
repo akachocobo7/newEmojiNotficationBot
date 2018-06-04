@@ -47,7 +47,7 @@ if __name__ == "__main__":
             c.execute(insert_sql, insert_data)
 
             # 新しく入った絵文字をslackで通知
-            slack.notify(text="emojiに :{0}: `{0}` が追加されました！".format(emoji_name))
+            slack.notify(text="emoji :{0}: `{0}` が追加されました！".format(emoji_name))
             
     # 変更を反映
     conn.commit()
