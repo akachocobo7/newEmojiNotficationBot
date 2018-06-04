@@ -3,3 +3,6 @@ enviroment.py
 
 # python
 __pycache__
+
+# データベース
+*.db
