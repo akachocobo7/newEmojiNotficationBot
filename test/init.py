@@ -44,8 +44,10 @@ if __name__ == "__main__":
     # 変更を反映
     conn.commit()
 
+    '''
     for i in c.execute('select * from custom_emojis'):
         print(i)
+    '''
 
     # データベースを閉じる
     conn.close()

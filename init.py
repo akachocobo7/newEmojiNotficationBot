@@ -7,7 +7,6 @@ import pandas as pd
 import MeCab
 import sqlite3
 import re
-import slackweb
 
 
 if __name__ == "__main__":
@@ -21,10 +20,6 @@ if __name__ == "__main__":
     file = requests.get(url, params=param, headers=headers)
     # 受け取ったjsonは実はstring型に変換されているのでjsonに変換
     json_dict = json.loads(file.text)
-
-
-    # slackにつなぐ
-    slack = slackweb.Slack(url=enviroment.WEBHOOK_URL)
 
 
     # データベースにつなぐ
@@ -45,12 +40,14 @@ if __name__ == "__main__":
             insert_sql = "INSERT INTO custom_emojis (pos) VALUES (?)"
             insert_data = (emoji_name,)
             c.execute(insert_sql, insert_data)
-
-            # 新しく入った絵文字をslackで通知
-            slack.notify(text="emoji :{0}: `{0}` が追加されました！".format(emoji_name))
             
     # 変更を反映
     conn.commit()
+
+    '''
+    for i in c.execute('select * from custom_emojis'):
+        print(i)
+    '''
 
     # データベースを閉じる
     conn.close()

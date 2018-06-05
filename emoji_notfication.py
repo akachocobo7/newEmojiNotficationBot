@@ -3,14 +3,12 @@
 import requests
 import json
 import enviroment
-import pandas as pd
-import MeCab
 import sqlite3
-import re
 import slackweb
+from time import sleep
 
 
-if __name__ == "__main__":
+def main():
     # 絵文字リスト取得用のurl
     url = 'https://slack.com/api/emoji.list'
     # 認証用のパラメータ
@@ -75,3 +73,8 @@ if __name__ == "__main__":
 
     # データベースを閉じる
     conn.close()
+
+if __name__ == "__main__":
+    while(1):
+        main()
+        sleep(300)  # 5分間待ってやる
