@@ -1,6 +1,6 @@
 # newEmojiNotficationBot
 
-slackで新しい絵文字が追加されると、slackに通知するbotです。
+slackで新しい絵文字が追加されたり、削除されたりすると、slackに通知するbotです。
 
 ## 使い方
 
