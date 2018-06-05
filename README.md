@@ -7,9 +7,11 @@
 - ライブラリ`slackweb`をインストール
 
 - SLACKのレガシートークンを取得
+
 https://api.slack.com/custom-integrations/legacy-tokens から取得
 
 - webhookの設定
+
 https://slack.com/services/new/incoming-webhook から botが報告するチャンネルを設定し、インテグレーションを追加
 また、Webhook URLを控えておく
 
