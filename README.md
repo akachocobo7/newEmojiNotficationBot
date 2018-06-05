@@ -1,5 +1,7 @@
 # newEmojiNotficationBot
 
+slackで新しい絵文字が追加されると、slackに通知するbotです。
+
 ## 使い方
 
 - python3をインストール
@@ -13,6 +15,7 @@ https://api.slack.com/custom-integrations/legacy-tokens から取得
 - webhookの設定
 
 https://slack.com/services/new/incoming-webhook から botが報告するチャンネルを設定し、インテグレーションを追加
+
 また、Webhook URLを控えておく
 
 - clone
