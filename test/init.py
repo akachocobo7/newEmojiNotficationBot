@@ -4,7 +4,6 @@ import requests
 import json
 import enviroment
 import pandas as pd
-import MeCab
 import sqlite3
 import re
 
