@@ -57,7 +57,7 @@ def main():
             c.execute(delete_sql, delete_data)
 
             # slackから削除された絵文字をslackに通知
-            slack.notify(text="emoji :{0}: `{0}` が削除されました...".format(emoji))
+            slack.notify(text="emoji :{0}: `{0}` が削除されました...".format(emoji), username="emoji-bot")
 
     for emoji_name in emoji_dict:
         # 新しい絵文字をデータベースに追加
@@ -66,7 +66,7 @@ def main():
         c.execute(insert_sql, insert_data)
 
         # 新しく入った絵文字をslackで通知
-        slack.notify(text="emoji :{0}: `{0}` が追加されました！".format(emoji_name))
+        slack.notify(text="emoji :{0}: `{0}` が追加されました！".format(emoji_name), username="emoji-bot")
             
     # 変更を反映
     conn.commit()
