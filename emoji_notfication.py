@@ -76,5 +76,10 @@ def main():
 
 if __name__ == "__main__":
     while(1):
-        main()
-        sleep(300)  # 5分間待ってやる
+        try:
+            main()
+        except Exception as e:
+            import datetime, traceback
+            print(datetime.datetime.today())
+            traceback.print_exc()
+        sleep(3600)  # 1時間待ってやる
